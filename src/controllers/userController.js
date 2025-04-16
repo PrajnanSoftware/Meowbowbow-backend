@@ -44,7 +44,7 @@ export const sendContactMail = catchAsync( async (req, res, next) => {
 
           const mailOptions = {
             from: process.env.EMAIL_USER,
-            to: 'support@ungagros.com',
+            to: 'support@meowbowbow.com',
             subject: `New Inquiry from ${name} - ${inquiryType}`,
             text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nSubject: ${subject}\nMessage: ${message}`,
           };
@@ -87,7 +87,7 @@ export const sendOTP = catchAsync( async (req, res, next) => {
                 console.log("Created Transport: ");
                 console.log("Sending Email: ",)
                 await transporter.sendMail({
-                    from: ` "Ung Agro" ${process.env.EMAIL_USER}`,
+                    from: ` "MeowBowbow" ${process.env.EMAIL_USER}`,
                     to: lowerCaseEmail,
                     subject: "Verify your email",
                     text: `Your OTP code is = ${otp}`
